@@ -1,0 +1,135 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>EmDoubleyou</title>
+    <link href="css/core.css" rel="stylesheet">
+    <!--core.css-->
+    <link href="css/animate.css" rel="stylesheet">
+    <!--animate.css-->
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    <!--google-font-->
+    <link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
+    <!--logo.png-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!--fontawsome-->
+    <script src="js/jquery.js"></script>
+    <!--jquery.js-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--bootstrap.min.js-->
+    <script src="js/modernizr.custom.js"></script>
+    <!--modernizr.custom.js-->
+    <script src="js/plugins.min.js"></script>
+    <!--plugins.min.js-->
+    <script src="js/main.js"></script>
+    <!--main.js-->
+    <script>
+        document.onkeydown = function(e) {
+            if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) { //Alt+c, Alt+v will also be disabled sadly. 
+            }
+            return false;
+        };
+
+    </script>
+    <script>
+        function click() {
+            if (event.button == 2 || event.button == 3) {
+                oncontextmenu = 'return false';
+            }
+        }
+        document.onmousedown = click
+        document.oncontextmenu = new Function("return false;")
+
+    </script>
+    <script>
+        function disableWheelScroll() {
+            if (document.body.addEventListener) document.body.addEventListener('DOMMouseScroll', blockWheel, false);
+            document.body.onmousewheel = blockWheel;
+        }
+
+        function blockWheel(event) {
+            if (!event) event = window.event;
+            if (event.stopPropagation) event.stopPropagation();
+            else event.cancelBubble = true;
+            if (event.preventDefault) event.preventDefault();
+            else event.returnValue = false;
+        }
+        disableWheelScroll();
+
+    </script>
+</head>
+
+<body onmousedown="return false" onselectstart="return false">
+    <style>
+        body {
+            overflow: hidden
+        }
+
+    </style>
+    <script>
+        disableWheelScroll();
+
+    </script>
+    <div id="star" class="video mask overlay">
+        <i class="volume-button fas fa-volume-up"></i>
+        <i class="stop-button fas fa-pause"></i>
+        <div class="video-fallback"></div>
+        <video id="video" autoplay loop>
+            <source src="https://www.youtube.com/watch?v=sLxkuNKpl1g" type="video/mp4" />
+            Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+        <canvas class="cover"></canvas>
+    </div>
+    <div class="pageoverlay">
+        <div class="lightbox">
+            <div class="awrapper">
+                <div class="titles fadeInDown">
+                    <h1>
+                        <font color="Red"></font>EmDoubleyou<font color="Red"></font>
+                    </h1>
+                </div>
+                <div class="media fadeInUp">
+                    <a href="" target="">
+                        <i class="fa fa-gem"></i>
+                    </a>
+                    <a href="https://www.youtube.com/c/antikz" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="http://steamcommunity.com/id/suckedbitch" target="_blank">
+                        <i class="fab fa-steam"></i>
+                    </a>
+                    <a href="https://discord.gg/W3XVCKQ" target="_blank">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="https://open.spotify.com/user/itsemdoubleyou?si=8b6cf8b973fc44f3" target="_blank">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://soundcloud.com/michelverum" target="_blank">
+                        <i class="fab fa-soundcloud"></i>
+                    </a>
+                    <!--<a href="https://www.cod-store.net" target="_blank">
+                        <i class="fas fa-globe"></i>
+                    </a>-->
+                    <!-- <a href="https://pastebin.com/u/AntikZ" target="_blank">
+<i class="fa fa-clipboard"></i>
+</a> -->
+                    <!-- <a href="http://cod-modifications.cf" target="_blank">
+<i class="fa fa-gamepad"></i>
+</a> -->
+                    <!-- <a href="paypal.com" target="_blank">
+<i class="fas fa-donate"></i>
+</a> -->
+                    <!--<a href="http://csgo-music.cf/" target="_blank">
+                        <i class="fas fa-music"></i>
+                    </a>-->
+                    <a href="" target="">
+                        <i class="fas fa-gem"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
